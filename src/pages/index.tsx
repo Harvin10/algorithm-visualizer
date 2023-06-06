@@ -4,7 +4,7 @@ import NavigationBar from '../components/navigation-bar/navigation-bar'
 
 export default function ParentPage() {
   return (
-    <div>
+    <div className='bg-black h-screen w-screen'>
       <NavigationBar />
       <Outlet />
     </div>

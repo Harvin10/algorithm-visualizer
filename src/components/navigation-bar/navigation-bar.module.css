@@ -1,0 +1,39 @@
+.divider {
+  position: relative;
+  min-width: calc(2 * 100vw);
+  min-height: 4px;
+  background-image: linear-gradient(270deg, #c20ea1 0%, #f46d41 100%, #c20ea1 0%, #f46d41 100%);
+  animation: movingLinearGradient 5s infinite;
+}
+
+.divider:before {
+  content:"";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(270deg, #c20ea1 0%, #f46d41 100%, #c20ea1 0%, #f46d41 100%);
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.divider:after {
+  content:"";
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(270deg, #c20ea1 0%, #f46d41 100%, #c20ea1 0%, #f46d41 100%);
+  filter: blur(25px);
+  z-index: -1;
+}
+
+@keyframes movingLinearGradient {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
